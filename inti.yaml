@@ -1,0 +1,23 @@
+config:
+  parallel: false
+  verbose: true
+
+tasks:
+  - name: "Update package cache"
+    apt:
+      update: true
+    unless: "test -f /var/cache/apt/updated-today"
+
+  - name: "Install nginx"
+    apt:
+      package: "nginx"
+
+#  - name: "Create web directory"
+#    file:
+#      path: "/var/www/html"
+#      state: "directory"
+#
+#  - name: "Start nginx service"
+#    command:
+#      command: "systemctl start nginx"
+#
