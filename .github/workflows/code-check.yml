@@ -5,6 +5,8 @@ on: pull_request
 jobs:
   complexity:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
 
     steps:
 
