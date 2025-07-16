@@ -1,0 +1,19 @@
+name: Complexity Check
+
+on: pull_request
+
+jobs:
+  complexity:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Check out source repository
+        uses: actions/checkout@v3
+
+      - name: Check project complexity
+        uses: paiml/pmat-action@main
+        with:
+          max-cyclomatic: 20
+          fail-on-violation: true
+          comment-on-pr: true
