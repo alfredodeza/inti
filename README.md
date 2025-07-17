@@ -1,6 +1,6 @@
 # inti
 
-This project is purely exploratory and not meant for production
+**This project is purely exploratory and not meant for production**
 
 Easy Rust-based configuration management for setting up dotfiles, packages, and getting things configured.
 
