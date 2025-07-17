@@ -6,8 +6,8 @@ jobs:
   complexity:
     runs-on: ubuntu-latest
     permissions:
-      pull-requests: write
       issues: write
+      pull-requests: write
 
 
     steps:
@@ -18,6 +18,6 @@ jobs:
       - name: Check project complexity
         uses: paiml/pmat-action@main
         with:
-          max-cyclomatic: 20
+          max-cyclomatic: 10
           fail-on-violation: true
           comment-on-pr: true
